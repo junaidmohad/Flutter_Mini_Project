@@ -1,95 +1,59 @@
-// ignore_for_file: non_constant_identifier_names
-
 import 'package:flutter/material.dart';
 
-class Wardrobe extends StatefulWidget {
-  const Wardrobe({super.key});
+class Looks extends StatefulWidget {
+  const Looks({super.key});
 
   @override
-  State<Wardrobe> createState() => _WardrobeState();
+  State<Looks> createState() => _LooksState();
 }
 
-class _WardrobeState extends State<Wardrobe> {
+class _LooksState extends State<Looks> {
+  List<String> occassions = [
+    'occassions1.png',
+    'occassions2.png',
+    'occassions3.png',
+  ];
 
-  List<String> shirts = [
-      'tshirt1.png',
-      'tshirt2.png',
-      'tshirt3.png',
-      'tshirt4.png',
-      'tshirt5.png',
-      'tshirt6.png',
-      'tshirt7.png',
-      'tshirt8.png',
-      'tshirt9.jpg',
-      'tshirt10.jpg',
-    ];
+  List<String> occassions_name = [
+    'Party Mode',
+    'Gym',
+    'Night Outs',
+  ];
 
-    List<String> shirts_name = [
-      'GUCCI Black T-shirt',
-      'Black Polo T-shirt',
-      'Tom\'s Green T-shirt',
-      'MARVEL Red T-shirt',
-      'Beach Peach T-shirt',
-      'Pine Green Stripped T-shirt',
-      'White Plain T-shirt',
-      'White Marshmellow T-shirt',
-      'Power OverSized T-shirt',
-      'Black Human Being T-shirt'
-    ];
+  List<String> customs = [
+    'customs1.png',
+    'customs2.png',
+    'customs3.png',
+  ];
 
-    List<String> sweatshirts = [
-      'sweatshirt1.png',
-      'sweatshirt2.png',
-      'sweatshirt3.png',
-      'sweatshirt4.png',
-      'sweatshirt5.png',
-      'sweatshirt6.png',
-      'sweatshirt7.png',
-      'sweatshirt8.png',
-      'sweatshirt9.png',
-      'sweatshirt10.png',
-    ];
+  List<String> customs_name = [
+    'Sunday Outfit',
+    'Happy Day',
+    'Winter Morning',
+  ];
 
-    List<String> sweatshirts_name = [
-      'Green Printed SweatShirt',
-      'PUMA SweatShirt Grey',
-      'MARVEL Green SweatShirt',
-      'Blue SweatShirt',
-      'Graffiti Printed SweatShirt',
-      'White Plain SweatShirt',
-      'Red Printed Hoodie',
-      'Blue-white Hip-hop Hoodie',
-      'White Printed SweatShirt',
-      'Pink Hip-hop Hoodie',
-    ];
+  List<String> moods = [
+    'pants1.png',
+    'pants2.png',
+    'pants3.png',
+    'pants4.png',
+  ];
 
-    List<String> pants = [
-      'pants1.png',
-      'pants2.png',
-      'pants3.png',
-      'pants4.png',
-    ];
-
-    List<String> pants_name = [
-      'Purple Trackpants',
-      'Men\'s Casuals',
-      'Blue Shorts',
-      'Grey Cargo Pants',
-    ];
+  List<String> moods_name = [
+    'Purple Trackpants',
+    'Men\'s Casuals',
+    'Blue Shorts',
+    'Grey Cargo Pants',
+  ];
 
   @override
   Widget build(BuildContext context) {
-
-    
-
-    
-
     int _currentIndex = 0;
 
     return SafeArea(
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(80.0),
+          preferredSize: Size.fromHeight(85.0),
           child: Padding(
             padding: const EdgeInsets.only(top: 30, bottom: 30),
             child: AppBar(
@@ -97,7 +61,7 @@ class _WardrobeState extends State<Wardrobe> {
               iconTheme: IconThemeData(color: Colors.black, size: 25),
               backgroundColor: Colors.white,
               title: Text(
-                "Good morning, Jacob!",
+                "What\'s Today?",
                 style: TextStyle(
                     color: Colors.black, fontSize: 25, fontFamily: 'Archivo'),
               ),
@@ -113,7 +77,7 @@ class _WardrobeState extends State<Wardrobe> {
                 TextField(
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.search),
-                      hintText: "Search Your Wardrobe",
+                      hintText: "Occassions, Moods or Customs",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15))),
                 ),
@@ -124,31 +88,31 @@ class _WardrobeState extends State<Wardrobe> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "T-Shirts",
+                      "Occassions",
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                     Text(
                       "See all",
                       style: TextStyle(
                           color: Color(0xFF04141E7),
-                          fontSize: 13,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold),
                     )
                   ],
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 SizedBox(
-                  height: 180,
+                  height: 233,
                   child: ListView.builder(
-                    itemCount: 10,
+                    itemCount: 3,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return Container(
-                        height: 158,
-                        width: 99,
+                        height: 233,
+                        width: 112,
                         margin: EdgeInsets.only(left: index == 0 ? 0 : 9),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
@@ -159,9 +123,9 @@ class _WardrobeState extends State<Wardrobe> {
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(15),
                                 child: Image.asset(
-                                  'assets/images/tshirts/${shirts[index]}',
-                                  height: 127,
-                                  width: 99,
+                                  'assets/images/${occassions[index]}',
+                                  height: 195,
+                                  width: 112,
                                   fit: BoxFit.cover,
                                 )),
                           ),
@@ -169,10 +133,10 @@ class _WardrobeState extends State<Wardrobe> {
                             height: 5,
                           ),
                           Text(
-                            shirts_name[index],
+                            occassions_name[index],
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontSize: 13, fontWeight: FontWeight.bold),
+                                fontSize: 14, fontWeight: FontWeight.bold),
                           )
                         ]),
                       );
@@ -180,39 +144,37 @@ class _WardrobeState extends State<Wardrobe> {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Sweat Shirts",
+                      "Customs",
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                     Text(
                       "See all",
                       style: TextStyle(
                           color: Color(0xFF04141E7),
-                          fontSize: 13,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold),
                     )
                   ],
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 SizedBox(
-                  
-                  height: 180,
+                  height: 233,
                   child: ListView.builder(
-                    
-                    itemCount: 10,
+                    itemCount: 3,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return Container(
-                        height: 158,
-                        width: 99,
+                        height: 233,
+                        width: 112,
                         margin: EdgeInsets.only(left: index == 0 ? 0 : 9),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
@@ -223,10 +185,9 @@ class _WardrobeState extends State<Wardrobe> {
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(15),
                                 child: Image.asset(
-                                  
-                                  'assets/images/sweatshirts/${sweatshirts[index]}',
-                                  height: 127,
-                                  width: 99,
+                                  'assets/images/${customs[index]}',
+                                  height: 195,
+                                  width: 112,
                                   fit: BoxFit.cover,
                                 )),
                           ),
@@ -234,10 +195,10 @@ class _WardrobeState extends State<Wardrobe> {
                             height: 5,
                           ),
                           Text(
-                            sweatshirts_name[index],
+                            customs_name[index],
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontSize: 13, fontWeight: FontWeight.bold),
+                                fontSize: 14, fontWeight: FontWeight.bold),
                           )
                         ]),
                       );
@@ -245,37 +206,37 @@ class _WardrobeState extends State<Wardrobe> {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Pants",
+                      "Moods",
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                     Text(
                       "See all",
                       style: TextStyle(
                           color: Color(0xFF04141E7),
-                          fontSize: 13,
+                          fontSize: 15,
                           fontWeight: FontWeight.bold),
                     )
                   ],
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 SizedBox(
-                  height: 180,
+                  height: 233,
                   child: ListView.builder(
                     itemCount: 4,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       return Container(
-                        height: 158,
-                        width: 99,
+                        height: 233,
+                        width: 112,
                         margin: EdgeInsets.only(left: index == 0 ? 0 : 9),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
@@ -286,9 +247,9 @@ class _WardrobeState extends State<Wardrobe> {
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(15),
                                 child: Image.asset(
-                                  'assets/images/${pants[index]}',
-                                  height: 127,
-                                  width: 99,
+                                  'assets/images/${moods[index]}',
+                                  height: 195,
+                                  width: 112,
                                   fit: BoxFit.cover,
                                 )),
                           ),
@@ -296,15 +257,18 @@ class _WardrobeState extends State<Wardrobe> {
                             height: 5,
                           ),
                           Text(
-                            pants_name[index],
+                            moods_name[index],
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontSize: 13, fontWeight: FontWeight.bold),
+                                fontSize: 14, fontWeight: FontWeight.bold),
                           )
                         ]),
                       );
                     },
                   ),
+                ),
+                SizedBox(
+                  height: 15,
                 ),
               ],
             ),
@@ -313,20 +277,14 @@ class _WardrobeState extends State<Wardrobe> {
         bottomNavigationBar: SizedBox(
           height: 80,
           child: BottomNavigationBar(
-          
-            currentIndex: _currentIndex,
+            currentIndex: 1,
             backgroundColor: Color(0xFFFAFAFB),
             items: [
               BottomNavigationBarItem(
-                icon: 
-                  
-                    ImageIcon(
-                      AssetImage("assets/logos/Vector_wardrobe.png"),
-                      // color: Colors.black,
-                    ),
-                    
-                  
-                
+                icon: ImageIcon(
+                  AssetImage("assets/logos/Vector_wardrobe.png"),
+                  // color: Colors.black,
+                ),
                 label: "Wardrobe",
               ),
               BottomNavigationBarItem(

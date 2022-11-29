@@ -2,88 +2,56 @@
 
 import 'package:flutter/material.dart';
 
-class Wardrobe extends StatefulWidget {
-  const Wardrobe({super.key});
+class MarketPlace extends StatefulWidget {
+  const MarketPlace({super.key});
 
   @override
-  State<Wardrobe> createState() => _WardrobeState();
+  State<MarketPlace> createState() => _MarketPlaceState();
 }
 
-class _WardrobeState extends State<Wardrobe> {
+class _MarketPlaceState extends State<MarketPlace> {
+  List<String> logos = [
+    'nikelogo.png',
+    'zaralogo.png',
+    'filalogo.png',
+    'batalogo.png'
+  ];
 
-  List<String> shirts = [
-      'tshirt1.png',
-      'tshirt2.png',
-      'tshirt3.png',
-      'tshirt4.png',
-      'tshirt5.png',
-      'tshirt6.png',
-      'tshirt7.png',
-      'tshirt8.png',
-      'tshirt9.jpg',
-      'tshirt10.jpg',
-    ];
+  List<String> logos_name = [
+    'Nike',
+    'ZARA',
+    'FILA',
+    'Bata',
+  ];
 
-    List<String> shirts_name = [
-      'GUCCI Black T-shirt',
-      'Black Polo T-shirt',
-      'Tom\'s Green T-shirt',
-      'MARVEL Red T-shirt',
-      'Beach Peach T-shirt',
-      'Pine Green Stripped T-shirt',
-      'White Plain T-shirt',
-      'White Marshmellow T-shirt',
-      'Power OverSized T-shirt',
-      'Black Human Being T-shirt'
-    ];
+  List<String> newdrops = [
+    'newdrop1.png',
+    'newdrop2.png',
+    'newdrop3.png',
+  ];
 
-    List<String> sweatshirts = [
-      'sweatshirt1.png',
-      'sweatshirt2.png',
-      'sweatshirt3.png',
-      'sweatshirt4.png',
-      'sweatshirt5.png',
-      'sweatshirt6.png',
-      'sweatshirt7.png',
-      'sweatshirt8.png',
-      'sweatshirt9.png',
-      'sweatshirt10.png',
-    ];
+  List<String> newdrops_name = [
+    'ADIDAS Sneakers',
+    'Galaxy Watches',
+    'H&M Jacket'
+  ];
 
-    List<String> sweatshirts_name = [
-      'Green Printed SweatShirt',
-      'PUMA SweatShirt Grey',
-      'MARVEL Green SweatShirt',
-      'Blue SweatShirt',
-      'Graffiti Printed SweatShirt',
-      'White Plain SweatShirt',
-      'Red Printed Hoodie',
-      'Blue-white Hip-hop Hoodie',
-      'White Printed SweatShirt',
-      'Pink Hip-hop Hoodie',
-    ];
+  List<String> newdrops_prices = ['125 US\$', '440 US\$', '73 US\$'];
 
-    List<String> pants = [
-      'pants1.png',
-      'pants2.png',
-      'pants3.png',
-      'pants4.png',
-    ];
+  List<String> newests = [
+    'newest1.png',
+    'newest2.png',
+    'newest3.png',
+  ];
 
-    List<String> pants_name = [
-      'Purple Trackpants',
-      'Men\'s Casuals',
-      'Blue Shorts',
-      'Grey Cargo Pants',
-    ];
+  List<String> newests_name = [
+    'SVP Hoodies',
+    'Light Blue Men\'s Suit',
+    'Sun Glasses',
+  ];
 
   @override
   Widget build(BuildContext context) {
-
-    
-
-    
-
     int _currentIndex = 0;
 
     return SafeArea(
@@ -97,7 +65,7 @@ class _WardrobeState extends State<Wardrobe> {
               iconTheme: IconThemeData(color: Colors.black, size: 25),
               backgroundColor: Colors.white,
               title: Text(
-                "Good morning, Jacob!",
+                "Let\'s buy something!",
                 style: TextStyle(
                     color: Colors.black, fontSize: 25, fontFamily: 'Archivo'),
               ),
@@ -113,7 +81,7 @@ class _WardrobeState extends State<Wardrobe> {
                 TextField(
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.search),
-                      hintText: "Search Your Wardrobe",
+                      hintText: "Brands, New Drops, Styles, Ocassion..",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15))),
                 ),
@@ -124,134 +92,7 @@ class _WardrobeState extends State<Wardrobe> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "T-Shirts",
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      "See all",
-                      style: TextStyle(
-                          color: Color(0xFF04141E7),
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  height: 180,
-                  child: ListView.builder(
-                    itemCount: 10,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        height: 158,
-                        width: 99,
-                        margin: EdgeInsets.only(left: index == 0 ? 0 : 9),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.white,
-                        ),
-                        child: Column(children: [
-                          Container(
-                            child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Image.asset(
-                                  'assets/images/tshirts/${shirts[index]}',
-                                  height: 127,
-                                  width: 99,
-                                  fit: BoxFit.cover,
-                                )),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            shirts_name[index],
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontSize: 13, fontWeight: FontWeight.bold),
-                          )
-                        ]),
-                      );
-                    },
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Sweat Shirts",
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      "See all",
-                      style: TextStyle(
-                          color: Color(0xFF04141E7),
-                          fontSize: 13,
-                          fontWeight: FontWeight.bold),
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  
-                  height: 180,
-                  child: ListView.builder(
-                    
-                    itemCount: 10,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        height: 158,
-                        width: 99,
-                        margin: EdgeInsets.only(left: index == 0 ? 0 : 9),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.white,
-                        ),
-                        child: Column(children: [
-                          Container(
-                            child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Image.asset(
-                                  
-                                  'assets/images/sweatshirts/${sweatshirts[index]}',
-                                  height: 127,
-                                  width: 99,
-                                  fit: BoxFit.cover,
-                                )),
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            sweatshirts_name[index],
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontSize: 13, fontWeight: FontWeight.bold),
-                          )
-                        ]),
-                      );
-                    },
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Pants",
+                      "Brands",
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
@@ -286,9 +127,71 @@ class _WardrobeState extends State<Wardrobe> {
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(15),
                                 child: Image.asset(
-                                  'assets/images/${pants[index]}',
+                                  'assets/logos/${logos[index]}',
                                   height: 127,
                                   width: 99,
+                                  fit: BoxFit.fitWidth,
+                                )),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            logos_name[index],
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontSize: 13, fontWeight: FontWeight.bold),
+                          )
+                        ]),
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Exclusive Drops",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "See all",
+                      style: TextStyle(
+                          color: Color(0xFF04141E7),
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
+                  height: 130,
+                  child: ListView.builder(
+                    itemCount: 3,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        height: 158,
+                        width: 99,
+                        margin: EdgeInsets.only(left: index == 0 ? 0 : 9),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                        ),
+                        child: Column(children: [
+                          Container(
+                            child: ClipRRect(
+                                borderRadius: BorderRadius.circular(90),
+                                child: Image.asset(
+                                  'assets/images/newdrops/${newdrops[index]}',
+                                  height: 79,
+                                  width: 80,
                                   fit: BoxFit.cover,
                                 )),
                           ),
@@ -296,7 +199,77 @@ class _WardrobeState extends State<Wardrobe> {
                             height: 5,
                           ),
                           Text(
-                            pants_name[index],
+                            newdrops_name[index],
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontSize: 13, fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            newdrops_prices[index],
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey),
+                          )
+                        ]),
+                      );
+                    },
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Newest",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "See all",
+                      style: TextStyle(
+                          color: Color(0xFF04141E7),
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
+                  height: 180,
+                  child: ListView.builder(
+                    itemCount: 3,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        height: 190,
+                        width: 140,
+                        margin: EdgeInsets.only(left: index == 0 ? 0 : 9),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                        ),
+                        child: Column(children: [
+                          Container(
+                            child: ClipRRect(
+                                borderRadius: BorderRadius.circular(15),
+                                child: Image.asset(
+                                  'assets/images/newests/${newests[index]}',
+                                  height: 130,
+                                  width: 140,
+                                  fit: BoxFit.cover,
+                                )),
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Text(
+                            newests_name[index],
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 13, fontWeight: FontWeight.bold),
@@ -313,20 +286,14 @@ class _WardrobeState extends State<Wardrobe> {
         bottomNavigationBar: SizedBox(
           height: 80,
           child: BottomNavigationBar(
-          
             currentIndex: _currentIndex,
             backgroundColor: Color(0xFFFAFAFB),
             items: [
               BottomNavigationBarItem(
-                icon: 
-                  
-                    ImageIcon(
-                      AssetImage("assets/logos/Vector_wardrobe.png"),
-                      // color: Colors.black,
-                    ),
-                    
-                  
-                
+                icon: ImageIcon(
+                  AssetImage("assets/logos/Vector_wardrobe.png"),
+                  // color: Colors.black,
+                ),
                 label: "Wardrobe",
               ),
               BottomNavigationBarItem(

@@ -69,14 +69,30 @@ flutter:
     - assets/logos/AppleLogo.png
     - assets/logos/FacebookLogo.png
     - assets/logos/GoogleLogo.png
-    - assets/images/tshirt1.png
-    - assets/images/tshirt2.png
-    - assets/images/tshirt3.png
-    - assets/images/tshirt4.png
-    - assets/images/sweatshirt1.png
-    - assets/images/sweatshirt2.png
-    - assets/images/sweatshirt3.png
-    - assets/images/sweatshirt4.png
+    - assets/logos/nikelogo.png
+    - assets/logos/zaralogo.png
+    - assets/logos/filalogo.png
+    - assets/logos/batalogo.png
+    - assets/images/tshirts/tshirt1.png
+    - assets/images/tshirts/tshirt2.png
+    - assets/images/tshirts/tshirt3.png
+    - assets/images/tshirts/tshirt4.png
+    - assets/images/tshirts/tshirt5.png
+    - assets/images/tshirts/tshirt6.png
+    - assets/images/tshirts/tshirt7.png
+    - assets/images/tshirts/tshirt8.png
+    - assets/images/tshirts/tshirt9.jpg
+    - assets/images/tshirts/tshirt10.jpg
+    - assets/images/sweatshirts/sweatshirt1.png
+    - assets/images/sweatshirts/sweatshirt2.png
+    - assets/images/sweatshirts/sweatshirt3.png
+    - assets/images/sweatshirts/sweatshirt4.png
+    - assets/images/sweatshirts/sweatshirt5.png
+    - assets/images/sweatshirts/sweatshirt6.png
+    - assets/images/sweatshirts/sweatshirt7.png
+    - assets/images/sweatshirts/sweatshirt8.png
+    - assets/images/sweatshirts/sweatshirt9.png
+    - assets/images/sweatshirts/sweatshirt10.png
     - assets/images/pants1.png
     - assets/images/pants2.png
     - assets/images/pants3.png
@@ -86,7 +102,22 @@ flutter:
     - assets/logos/Vector_wardrobe.png
     - assets/logos/Market_Stall.png
     - assets/logos/Badge.png
-
+    - assets/images/occassions1.png
+    - assets/images/occassions2.png
+    - assets/images/occassions3.png
+    - assets/images/customs1.png
+    - assets/images/customs2.png
+    - assets/images/customs3.png
+    - assets/images/newdrops/newdrop1.png
+    - assets/images/newdrops/newdrop2.png
+    - assets/images/newdrops/newdrop3.png
+    - assets/images/newests/newest1.png
+    - assets/images/newests/newest2.png
+    - assets/images/newests/newest3.png
+    - assets/logos/addtocart.png
+    - assets/images/wishlists/wishlist1.png
+    - assets/images/wishlists/wishlist2.png
+    - assets/images/wishlists/wishlist3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

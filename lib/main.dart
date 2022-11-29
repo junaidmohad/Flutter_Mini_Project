@@ -1,5 +1,8 @@
+import 'package:closetify_try_1/pages/LooksPage.dart';
+import 'package:closetify_try_1/pages/MarketPlacePage.dart';
 import 'package:closetify_try_1/pages/SignUpPage.dart';
 import 'package:closetify_try_1/pages/WardrobePage.dart';
+import 'package:closetify_try_1/pages/WishlistPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: const Wardrobe(),
+      home: const Wishlist(),
     );
   }
 }
