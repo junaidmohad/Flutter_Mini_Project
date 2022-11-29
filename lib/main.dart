@@ -1,4 +1,5 @@
 import 'package:closetify_try_1/pages/SignUpPage.dart';
+import 'package:closetify_try_1/pages/WardrobePage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,9 +16,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: true,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
       ),
-      home: const SignUpPage(),
+      home: const Wardrobe(),
     );
   }
 }

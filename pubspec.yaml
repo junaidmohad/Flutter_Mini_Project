@@ -39,6 +39,8 @@ dependencies:
   url_launcher: ^6.1.7
   flutter_linkify: ^5.0.2
 
+
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -64,6 +66,26 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/logos/BackLogo.png
+    - assets/logos/AppleLogo.png
+    - assets/logos/FacebookLogo.png
+    - assets/logos/GoogleLogo.png
+    - assets/images/tshirt1.png
+    - assets/images/tshirt2.png
+    - assets/images/tshirt3.png
+    - assets/images/tshirt4.png
+    - assets/images/sweatshirt1.png
+    - assets/images/sweatshirt2.png
+    - assets/images/sweatshirt3.png
+    - assets/images/sweatshirt4.png
+    - assets/images/pants1.png
+    - assets/images/pants2.png
+    - assets/images/pants3.png
+    - assets/images/pants4.png
+    - assets/logos/Vector_looks.png
+    - assets/logos/Vector_wardrobe.png
+    - assets/logos/Vector_wardrobe.png
+    - assets/logos/Market_Stall.png
+    - assets/logos/Badge.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

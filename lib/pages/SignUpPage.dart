@@ -120,23 +120,104 @@ class SignUpPage extends StatelessWidget {
                   style: TextStyle(fontSize: 20),
                 ),
               ),
+              SizedBox(height: 10,),
               Center(
                 child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF05944F),
+                    style: ElevatedButton.styleFrom(                        
+                        primary: Color(0xFF09101D),
                         padding:
-                            EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                            EdgeInsets.only(left: 70, top: 5, bottom: 5),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
                         fixedSize: Size(500, 50)),
                     onPressed: () => (Wardrobe()),
-                    child: Text(
-                      "Continue",
-                      style: TextStyle(
-                        color: Colors.white,
-                        // fontSize: 20,
-                      ),
+                    child: Row(                        
+                      children: [
+                        ImageIcon(
+                          AssetImage("assets/logos/AppleLogo.png")
+                        ),
+                        SizedBox(width: 10),
+                        Text(                           
+                          "Continue with Apple",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
                     )),
+              ),
+              SizedBox(height: 10,),
+              Center(
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(                        
+                        primary: Color(0xFF425993),
+                        padding:
+                            EdgeInsets.only(left: 50, top: 5, bottom: 5),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
+                        fixedSize: Size(500, 50)),
+                    onPressed: () => (Wardrobe()),
+                    child: Row(                        
+                      children: [
+                        ImageIcon(
+                          AssetImage("assets/logos/FacebookLogo.png"),
+                          size: 35,
+                        ),
+                        SizedBox(width: 10),
+                        Text(                           
+                          "Continue with Facebook",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
+                    )),
+              ),
+              SizedBox(height: 10,),
+              Center(
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(                        
+                        primary: Color(0xFF5384EC),
+                        padding:
+                            EdgeInsets.only(left: 68, top: 5, bottom: 5),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
+                        fixedSize: Size(500, 50)),
+                    onPressed: () => (Wardrobe()),
+                    child: Row(                        
+                      children: [
+                        ImageIcon(
+                          AssetImage("assets/logos/GoogleLogo.png"),
+                          size: 22,
+                        ),
+                        SizedBox(width: 10),
+                        Text(                           
+                          "Continue with Google",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
+                    )),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Center(
+                child: RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                        style:
+                            TextStyle(color: Colors.black), //apply style to all
+                        children: [
+                      TextSpan(text: "or "),
+                      TextSpan(
+                          text: "Login or continue as guest",
+                          style: TextStyle(color: Colors.green[700])),
+                    ])),
               ),
             ],
           ),
