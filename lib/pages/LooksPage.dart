@@ -274,50 +274,6 @@ class _LooksState extends State<Looks> {
             ),
           ),
         ),
-        bottomNavigationBar: SizedBox(
-          height: 80,
-          child: BottomNavigationBar(
-            currentIndex: 1,
-            backgroundColor: Color(0xFFFAFAFB),
-            items: [
-              BottomNavigationBarItem(
-                icon: ImageIcon(
-                  AssetImage("assets/logos/Vector_wardrobe.png"),
-                  // color: Colors.black,
-                ),
-                label: "Wardrobe",
-              ),
-              BottomNavigationBarItem(
-                icon: ImageIcon(
-                  AssetImage("assets/logos/Vector_looks.png"),
-                  // color: Colors.grey,
-                ),
-                label: "Looks",
-              ),
-              BottomNavigationBarItem(
-                icon: ImageIcon(
-                  AssetImage("assets/logos/Market_Stall.png"),
-                  // color: Colors.grey,
-                ),
-                label: "Looks",
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.star_border,
-                  // color: Colors.grey,
-                ),
-                label: "Wishlist",
-              ),
-            ],
-            selectedItemColor: Colors.black,
-            unselectedItemColor: Colors.grey,
-            // onTap: ((index) {
-            //   setState(() {
-            //     _currentIndex = index;
-            //   });
-            // }),
-          ),
-        ),
       ),
     );
   }

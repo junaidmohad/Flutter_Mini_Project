@@ -3,6 +3,8 @@ import 'package:closetify_try_1/pages/MarketPlacePage.dart';
 import 'package:closetify_try_1/pages/SignUpPage.dart';
 import 'package:closetify_try_1/pages/WardrobePage.dart';
 import 'package:closetify_try_1/pages/WishlistPage.dart';
+import 'package:closetify_try_1/pages/homeBotNav.dart';
+import 'package:closetify_try_1/util/routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +23,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: const Wishlist(),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => SignUpPage(),
+        MyRoutes.signupRoute:(context) => SignUpPage(),
+        MyRoutes.homeNavRoute: (context) => homeNavBar(),
+        MyRoutes.wardrobeRoute:(context) => Wardrobe(),        
+        MyRoutes.looksRoute:(context) => SignUpPage(),
+        MyRoutes.marketRoute:(context) => MarketPlace(),
+        MyRoutes.wishlistRoute:(context) => Wishlist() 
+        
+
+
+      },
     );
   }
 }

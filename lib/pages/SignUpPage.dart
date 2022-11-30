@@ -1,3 +1,4 @@
+import 'package:closetify_try_1/util/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -102,7 +103,8 @@ class SignUpPage extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
                         fixedSize: Size(500, 50)),
-                    onPressed: () => (Wardrobe()),
+                    onPressed: () =>
+                        (Navigator.pushNamed(context, MyRoutes.homeNavRoute)),
                     child: Text(
                       "Continue",
                       style: TextStyle(
@@ -120,24 +122,24 @@ class SignUpPage extends StatelessWidget {
                   style: TextStyle(fontSize: 20),
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Center(
                 child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(                        
+                    style: ElevatedButton.styleFrom(
                         primary: Color(0xFF09101D),
-                        padding:
-                            EdgeInsets.only(left: 70, top: 5, bottom: 5),
+                        padding: EdgeInsets.only(left: 70, top: 5, bottom: 5),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
                         fixedSize: Size(500, 50)),
-                    onPressed: () => (Wardrobe()),
-                    child: Row(                        
+                    onPressed: () =>
+                        (Navigator.pushNamed(context, MyRoutes.homeNavRoute)),
+                    child: Row(
                       children: [
-                        ImageIcon(
-                          AssetImage("assets/logos/AppleLogo.png")
-                        ),
+                        ImageIcon(AssetImage("assets/logos/AppleLogo.png")),
                         SizedBox(width: 10),
-                        Text(                           
+                        Text(
                           "Continue with Apple",
                           style: TextStyle(
                             color: Colors.white,
@@ -147,25 +149,27 @@ class SignUpPage extends StatelessWidget {
                       ],
                     )),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Center(
                 child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(                        
+                    style: ElevatedButton.styleFrom(
                         primary: Color(0xFF425993),
-                        padding:
-                            EdgeInsets.only(left: 50, top: 5, bottom: 5),
+                        padding: EdgeInsets.only(left: 50, top: 5, bottom: 5),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
                         fixedSize: Size(500, 50)),
-                    onPressed: () => (Wardrobe()),
-                    child: Row(                        
+                    onPressed: () =>
+                        (Navigator.pushNamed(context, MyRoutes.homeNavRoute)),
+                    child: Row(
                       children: [
                         ImageIcon(
                           AssetImage("assets/logos/FacebookLogo.png"),
                           size: 35,
                         ),
                         SizedBox(width: 10),
-                        Text(                           
+                        Text(
                           "Continue with Facebook",
                           style: TextStyle(
                             color: Colors.white,
@@ -175,25 +179,27 @@ class SignUpPage extends StatelessWidget {
                       ],
                     )),
               ),
-              SizedBox(height: 10,),
+              SizedBox(
+                height: 10,
+              ),
               Center(
                 child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(                        
+                    style: ElevatedButton.styleFrom(
                         primary: Color(0xFF5384EC),
-                        padding:
-                            EdgeInsets.only(left: 68, top: 5, bottom: 5),
+                        padding: EdgeInsets.only(left: 68, top: 5, bottom: 5),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15)),
                         fixedSize: Size(500, 50)),
-                    onPressed: () => (Wardrobe()),
-                    child: Row(                        
+                    onPressed: () =>
+                        (Navigator.pushNamed(context, MyRoutes.homeNavRoute)),
+                    child: Row(
                       children: [
                         ImageIcon(
                           AssetImage("assets/logos/GoogleLogo.png"),
                           size: 22,
                         ),
                         SizedBox(width: 10),
-                        Text(                           
+                        Text(
                           "Continue with Google",
                           style: TextStyle(
                             color: Colors.white,
@@ -213,11 +219,11 @@ class SignUpPage extends StatelessWidget {
                         style:
                             TextStyle(color: Colors.black), //apply style to all
                         children: [
-                      TextSpan(text: "or "),
-                      TextSpan(
-                          text: "Login or continue as guest",
-                          style: TextStyle(color: Colors.green[700])),
-                    ])),
+                          TextSpan(text: "or "),
+                          TextSpan(
+                              text: "Login or continue as guest",
+                              style: TextStyle(color: Colors.green[700])),
+                        ])),
               ),
             ],
           ),
